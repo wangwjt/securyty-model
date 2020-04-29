@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.model.security.demo</groupId>
+    <artifactId>securyty-model</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>security-core</module>
+        <module>security-app</module>
+        <module>security-browser</module>
+        <module>security-demo</module>
+    </modules>
+    <packaging>pom</packaging>
+    <!-- 版本管理 -->
+    <properties>
+        <spring.boot.version>2.2.6.RELEASE</spring.boot.version>
+        <spring-boot-starter-web.version>2.2.6.RELEASE</spring-boot-starter-web.version>
+        <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
+        <security.oauth.boot.version>2.2.6.RELEASE</security.oauth.boot.version>
+        <spring-boot-starter-security.version>2.2.6.RELEASE</spring-boot-starter-security.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <security.jar.version>1.0-SNAPSHOT</security.jar.version>
+    </properties>
+    <!-- 依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- springboot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring-boot-starter-security.version}</version>
+            </dependency>
+            <!-- springCloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- security.oauth -->
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${security.oauth.boot.version}</version>
+            </dependency>
+            <!-- common包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.model.security.demo</groupId>
+                <artifactId>security-app</artifactId>
+                <version>${security.jar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.model.security.demo</groupId>
+                <artifactId>security-browser</artifactId>
+                <version>${security.jar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.model.security.demo</groupId>
+                <artifactId>security-core</artifactId>
+                <version>${security.jar.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
