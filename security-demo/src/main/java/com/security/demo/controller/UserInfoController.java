@@ -15,13 +15,19 @@ import java.util.List;
 @RestController
 public class UserInfoController {
 
-    @GetMapping("/AllUser")
+    @GetMapping("/all")
     public UserVO getAllUserInfo() {
         UserVO userVO = new UserVO();
         List<User> userList = Arrays.asList(new User("123", "abc"),
                 new User("456", "def"),
                 new User("789", "qwe"));
+        userVO.setUserList(userList);
         return userVO;
+    }
+
+    @GetMapping("/user")
+    public User getUserInfo() {
+        return new User("123", "abc");
     }
 
 }

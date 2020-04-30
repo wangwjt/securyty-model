@@ -15,6 +15,7 @@
         <dependency>
             <groupId>com.model.security.demo</groupId>
             <artifactId>security-core</artifactId>
+            <version>${security.jar.version}</version>
         </dependency>
     </dependencies>
 
