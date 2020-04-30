@@ -23,6 +23,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>2.3.3.RELEASE</version>
+            </dependency>
+            <dependency>
                 <!-- 自动管理各个依赖版本 -->
                 <!-- https://blog.csdn.net/nnsword/article/details/86979647 -->
                 <groupId>io.spring.platform</groupId>
